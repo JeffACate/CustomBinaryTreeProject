@@ -6,12 +6,7 @@ using System.Threading.Tasks;
 
 namespace CustomBinaryTree
 {
-    class Program
+    class Branch<T>
     {
-        static void Main(string[] args)
-        {
-            Tree myTree = new Tree;
-
-        }
     }
 }
