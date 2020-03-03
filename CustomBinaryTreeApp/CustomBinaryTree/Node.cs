@@ -12,6 +12,8 @@ namespace CustomBinaryTree
         public Node leftSubTree;
         public Node rightSubTree;
 
+        public int Data { get => data; }
+
         public Node(int data)
         {
             this.data = data;

@@ -12,12 +12,24 @@ namespace CustomBinaryTree
         
         public void Add(int number)
         {
-            Node node = new Node(number);
-            return;
+            if(root == null)
+            {
+                Node node = new Node(number);
+                return;
+            }
+            Node counterNode = root;
+            while(counterNode != null)
+            {
+                if (number < counterNode.)
+                {
+
+                }
+            }
         }
-        public void Search(Node nodeToAdd) 
-        { 
-            
+        public bool Search(int numberToSearch) 
+        {
+            throw new NotImplementedException();
+            return false;
         }
     }
 }

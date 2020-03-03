@@ -17,14 +17,14 @@ namespace CustomBinaryTree
                 myTree.Add(num);
             }
 
-            if(myTree.Search(4))
-            {
-                Console.WriteLine("Item found!!");
-            }
-            else
-            {
-                Console.WriteLine("Number not found!");
-            }
+            //if(myTree.Search(4))
+            //{
+            //    Console.WriteLine("Item found!!");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Number not found!");
+            //}
             Console.ReadKey();
         }
     }
