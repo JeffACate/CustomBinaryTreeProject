@@ -11,20 +11,13 @@ namespace CustomBinaryTree
         static void Main(string[] args)
         {
             Tree myTree = new Tree();
-            int[] nums = new int[] { 0, 9, 1, 8, 2, 7, 3, 6, 4, 5 };
+            int[] nums = new int[] { 5, 1, 8, 2, 7, 3, 6, 4, 9 };
             foreach (int num in nums)
             {
                 myTree.Add(num);
             }
+            Console.WriteLine(myTree.Search(19));
 
-            //if(myTree.Search(4))
-            //{
-            //    Console.WriteLine("Item found!!");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Number not found!");
-            //}
             Console.ReadKey();
         }
     }
