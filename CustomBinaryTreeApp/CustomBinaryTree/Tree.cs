@@ -29,27 +29,26 @@ namespace CustomBinaryTree
             }
             while (true)
             {
-                if (node.Data < currentTree.Data && currentTree.leftSubTree == null) { currentTree.leftSubTree = node; return; }
-                else if (node.Data < currentTree.Data && currentTree.leftSubTree != null) { currentTree = currentTree.leftSubTree; }
-                else if (node.Data > currentTree.Data && currentTree.rightSubTree == null) { currentTree.rightSubTree = node; return; }
-                else if (node.Data > currentTree.Data && currentTree.rightSubTree != null) { currentTree = currentTree.rightSubTree; }
+                if (node.Data <= currentTree.Data && currentTree.leftSubTree == null) { currentTree.leftSubTree = node; return; }
+                else if (node.Data <= currentTree.Data && currentTree.leftSubTree != null) { currentTree = currentTree.leftSubTree; }
+                else if (node.Data >= currentTree.Data && currentTree.rightSubTree == null) { currentTree.rightSubTree = node; return; }
+                else if (node.Data >= currentTree.Data && currentTree.rightSubTree != null) { currentTree = currentTree.rightSubTree; }
             }
         }
         public bool Search(int numberToSearch)
         {
-            if (root == null) { return false; } // ROOT IS NULL
-            if (root.Data == numberToSearch) { return true; } // ROOT.DATA 
+            if (root == null) { return false; }
+            else if (root.leftSubTree == null && root.rightSubTree == null) { return false; }
+
             Node currentTree = root;
 
             while (true)
             {
-                if (currentTree.leftSubTree == null && currentTree.rightSubTree == null) { return false; } // BOTH NULL 
+                if (currentTree.Data == numberToSearch) { return true; }
                 else if (numberToSearch < currentTree.Data && currentTree.leftSubTree == null) { return false; }
+                else if (numberToSearch < currentTree.Data && currentTree.leftSubTree != null) { currentTree = currentTree.leftSubTree; }
                 else if (numberToSearch > currentTree.Data && currentTree.rightSubTree == null) { return false; }
-                else if (currentTree.leftSubTree.Data == numberToSearch) { return true; } // LEFT.DATA
-                else if (currentTree.rightSubTree.Data == numberToSearch) { return true; } // RIGHT.DATA
-                else if (numberToSearch < currentTree.Data && currentTree.leftSubTree != null) { currentTree = currentTree.leftSubTree; }  // NUMBER LESS THEN THIS.DATA MOVE LEFT
-                else if (numberToSearch > currentTree.Data && currentTree.rightSubTree != null) { currentTree = currentTree.rightSubTree; } // NUMBER GREATER THEN THIS.DATA MOVE RIGHT
+                else if (numberToSearch > currentTree.Data && currentTree.rightSubTree != null) { currentTree = currentTree.rightSubTree; }
             }
         }
     }
