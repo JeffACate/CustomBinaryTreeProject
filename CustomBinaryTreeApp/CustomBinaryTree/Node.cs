@@ -8,15 +8,15 @@ namespace CustomBinaryTree
 {
     class Node
     {
-        public int data;
-        public Node rightBranch;
-        public Node leftBranch;
+        private int data;
+        public Node leftSubTree;
+        public Node rightSubTree;
+
         public Node(int data)
         {
             this.data = data;
-            rightBranch = null;
-            leftBranch = null;
         }
+        
 
     }
 }

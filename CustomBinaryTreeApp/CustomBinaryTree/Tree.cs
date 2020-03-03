@@ -8,7 +8,16 @@ namespace CustomBinaryTree
 {
     class Tree
     {
-        private Node root = null;
+        private Node root;
+        
+        public void Add(int number)
+        {
+            Node node = new Node(number);
+            return;
+        }
+        public void Search(Node nodeToAdd) 
+        { 
+            
+        }
     }
-
 }
